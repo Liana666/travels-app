@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.sass'
+import { useEffect, useState } from 'react'
 
-function App() {
+import CountrysContainer from './components/Countrys/CountrysContainer'
+
+const App = () => {
+  const [countrys, setCountrys] = useState([])
+
+  useEffect(() => {
+    fetch('http://myjson.dit.upm.es/api/bins/3d37')
+      .then(res => res.json())
+      .then(body => {
+        let res = body
+        setCountrys(res)
+      })
+  }, [])
+
+
+  console.log(countrys)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="App__header">
+        Our travels
       </header>
+      <CountrysContainer />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
