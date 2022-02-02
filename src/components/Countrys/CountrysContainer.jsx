@@ -9,7 +9,7 @@ import Country from "./Country"
 
 const CountrysContainer = () => {
     let dispatch = useDispatch()
-    let countries = useSelector((state) => state.ContryPage.countries.map(item => item.country))
+    let countries = useSelector(state => state.ContryPage.countries.map(item => item.country))
     let set = new Set(countries)
 
     useEffect(() => {
@@ -17,9 +17,8 @@ const CountrysContainer = () => {
             .then(res => {
                 dispatch(addCountrys(res))
             })
-    }, [])
+    }, [dispatch])
 
-    console.log(countries)
 
     return (
         <>

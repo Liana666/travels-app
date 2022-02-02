@@ -1,0 +1,21 @@
+$hover_color: #F47685
+$active_color: #F3475B
+
+.countries-list
+    display: flex
+    list-style: none
+
+    .countries-list__li
+        padding: 10px 20px
+        margin-right: 34px
+        border-radius: 8px
+        transition: 0.5s ease 0s
+
+    .countries-list__li:hover
+        background-attachment: fixed
+        background: $hover_color
+
+        cursor: pointer
+
+    .countries-list__li.active
+        background: $active_color

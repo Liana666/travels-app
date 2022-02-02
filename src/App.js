@@ -1,4 +1,5 @@
 import './App.sass'
+import CartsContainer from './components/Carts/CartsContainer'
 
 import CountrysContainer from './components/Countrys/CountrysContainer'
 
@@ -9,6 +10,7 @@ const App = () => {
         Our travels
       </header>
       <CountrysContainer />
+      <CartsContainer />
     </div>
   )
 }
