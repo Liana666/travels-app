@@ -5,6 +5,7 @@ import store from './redux/store'
 import './index.sass'
 import App from './App'
 
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>

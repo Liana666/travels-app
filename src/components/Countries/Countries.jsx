@@ -1,9 +1,9 @@
-import './Country.sass'
+import './Countries.sass'
 import { useDispatch } from 'react-redux'
 import { addCurrentCountry } from '../../redux/reducers/CartsReducer'
 import { useSelector } from 'react-redux'
 
-const Country = ({ countries }) => {
+const Countries = ({ countries }) => {
    let dispatch = useDispatch()
    let currentCountry = useSelector(state => state.CartPage.currentCountry)
 
@@ -36,4 +36,4 @@ const Country = ({ countries }) => {
    )
 }
 
-export default Country
+export default Countries

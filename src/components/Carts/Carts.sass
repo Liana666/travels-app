@@ -1,7 +1,99 @@
+$prev-img: url('../../img/icon/right.svg')
+$next-img: url('../../img/icon/left.svg')
 
-.carts-grid
-    padding: 0 5px
-    display: grid
-    grid-template-columns: repeat(6,1fr)
-    grid-template-rows: 2
-    grid-gap: 10px
+.slider
+    overflow: hidden
+
+    .slick-list
+        margin: 0 -10px
+
+    .slider__item
+        margin-bottom: 35px
+        border-radius: 8px
+        overflow: hidden
+        padding: 0 10px
+
+    .slider__item:hover
+        cursor: pointer
+
+    .slider__pos
+        position: relative
+
+    .slider__img
+        width: 100%
+        border-radius: 8px
+
+    .slider__overtext
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        border-radius: 8px
+        z-index: 1
+        background: linear-gradient(0deg, rgb(0 0 0) 0%, rgb(0 0 0 / 64%) 26.57%, rgba(0, 0, 0, 0.3) 52.56%, rgba(0, 0, 0, 0) 100%)
+
+        .over__city
+            position: absolute
+            font-weight: bold
+            font-size: 16px
+            line-height: 19px
+            bottom: 17%
+            left: 7%
+
+        .over__country
+            position: absolute
+            font-weight: 400
+            font-size: 16px
+            line-height: 19px
+            bottom: 8%
+            left: 7%
+
+    .slick-dots
+        display: flex!important
+        align-items: center
+        justify-content: center
+
+        li
+            list-style: none
+
+            button
+                font-size: 0
+                width: 7px
+                height: 7px
+                background-color: #fff
+                border-radius: 50%
+                margin-right: 10px
+                border: none
+
+        .slick-active
+            button
+                background-color: #FE003D
+
+    .slick-track
+        display: flex
+
+    .slick-arrow
+        position: absolute
+        top: 67%
+        z-index: 1
+        font-size: 0
+        width: 40px
+        height: 40px
+        border: none
+        transform: translate(-50%, -50%)
+        transition: 0.5s ease 0s
+        border-radius: 50%
+
+    .slick-arrow:hover
+        cursor: pointer
+        background-color: #FE003D
+
+    .slick-next
+        position: absolute
+        right: 4vw
+        background: $prev-img center no-repeat
+
+    .slick-prev
+        left: 7vw
+        background: $next-img center no-repeat

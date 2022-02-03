@@ -1,7 +1,7 @@
 import './App.sass'
 import CartsContainer from './components/Carts/CartsContainer'
 
-import CountrysContainer from './components/Countrys/CountrysContainer'
+import CountriesContainer from './components/Countries/CountriesContainer'
 
 const App = () => {
   return (
@@ -9,7 +9,7 @@ const App = () => {
       <header className="App__header">
         Our travels
       </header>
-      <CountrysContainer />
+      <CountriesContainer />
       <CartsContainer />
     </div>
   )

@@ -15,14 +15,16 @@ const CartsContainer = () => {
 
     })
 
-    console.log(countries)
 
     return (
         <>
-            {countries.length > 0 ?
-                countries.map((item, index) => <Carts key={index.toString()} {...item} />)
-                : null
-            }
+            <section>
+                {countries.length > 0 ?
+                    <Carts countries={countries} />
+                    : null
+                }
+            </section>
+
         </>
     )
 
