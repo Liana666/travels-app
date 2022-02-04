@@ -15,6 +15,7 @@ const Countries = ({ countries }) => {
       dispatch(addCurrentCountry(''))
    }
 
+
    return (
       <>
          <ul className="countries-list">

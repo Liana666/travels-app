@@ -15,14 +15,15 @@ const Carts = ({ countries }) => {
         slidesToScroll: 1,
         rows: 2,
         slidesPerRow: 6,
+        arrows: true,
         responsive: [
             {
                 breakpoint: 1400,
                 settings: {
                     slidesPerRow: 5,
                     slidesToShow: 1,
-                    arrows: true,
-                    dots: false
+                    arrows: false,
+                    dots: true
                 }
             },
             {
@@ -30,8 +31,8 @@ const Carts = ({ countries }) => {
                 settings: {
                     slidesPerRow: 4,
                     slidesToShow: 1,
-                    arrows: true,
-                    dots: false
+                    arrows: false,
+                    dots: true
                 }
             },
             {
